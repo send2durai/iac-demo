@@ -1,3 +1,3 @@
 variable "region" {
-  defailt  = "ap-south-1"
+  default  = "ap-south-1"
 }
