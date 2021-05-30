@@ -6,11 +6,9 @@ provider "aws" {
 
 ## Creating VPC in AWS
 
-resource "aws_vpc" "main" {
+resource "aws_vpc" "dev" {
   cidr_block       = "192.168.0.0/16"
   instance_tenancy = "default"
-  # region           = "ap-south-1"
-
   tags             = {
     Name           = "demo-vpc"
     purpose        = "Terraform-CICD"
@@ -19,7 +17,7 @@ resource "aws_vpc" "main" {
 
 ## Creating a Pub/Private subnets
 resource "aws_subnet" "private-subnet" {
-  vpc_id     = aws_vpc.main.id
+  vpc_id     = aws_vpc.dev.id
   cidr_block = "192.168.0.0/24"
 
   tags       = {
@@ -28,7 +26,7 @@ resource "aws_subnet" "private-subnet" {
   }
 }
 resource "aws_subnet" "public-subnet" {
-  vpc_id     = aws_vpc.main.id
+  vpc_id     = aws_vpc.dev.id
   cidr_block = "192.168.1.0/24"
 
   tags       = {
@@ -72,6 +70,7 @@ resource "aws_db_instance" "demo-mysqldb" {
   username             = "root"
   password             = "login1-2"
   parameter_group_name = "default.mysql5.7"
+  publicly_accessible  = false
   skip_final_snapshot  = true
 }
 
