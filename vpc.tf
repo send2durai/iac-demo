@@ -70,7 +70,7 @@ resource "aws_db_instance" "demo-mysqldb" {
   username             = "root"
   password             = "login1-2"
   parameter_group_name = "default.mysql5.7"
-  publicly_accessible  = false
+  publicly_accessible  = true
   skip_final_snapshot  = true
 }
 
