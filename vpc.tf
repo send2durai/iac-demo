@@ -49,3 +49,32 @@ resource "aws_s3_bucket" "b" {
     purpose     = "Hosting a static web-content"
   }
 }
+
+### Creating an EC2 instance (t2.micro)
+
+resource "aws_instance" "web" {
+  ami           = ami-010aff33ed5991201
+  instance_type = "t2.micro"
+  count         = 2
+
+  tags = {
+    Name = "Public-instance"
+    purpose = "Internet facing instance"
+  }
+}
+#### RDS instance creating
+resource "aws_db_instance" "demo-mysqldb" {
+  allocated_storage    = 10
+  engine               = "mysql"
+  engine_version       = "5.7"
+  instance_class       = "db.t2.micro"
+  name                 = "my_sql_db"
+  username             = "root"
+  password             = "login1-2"
+  parameter_group_name = "default.mysql5.7"
+  skip_final_snapshot  = true
+}
+
+
+
+
