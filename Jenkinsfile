@@ -36,5 +36,9 @@ pipeline {
                 sh 'terraform apply --auto-approve'
             }
         }
+	stage ("terraform destory") {
+	    steps {
+	        sh 'terraform destroy --auto-approve'
+	}
     }
 }
