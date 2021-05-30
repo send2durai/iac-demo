@@ -13,6 +13,6 @@ resource "aws_vpc" "main" {
 
   tags             = {
     Name           = "demo-vpc"
-    purpose        = "Jenkins-CICD"
+    purpose        = "Terraform-CICD"
   }
 }
