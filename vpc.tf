@@ -53,7 +53,7 @@ resource "aws_s3_bucket" "b" {
 ### Creating an EC2 instance (t2.micro)
 
 resource "aws_instance" "web" {
-  ami           = ami-010aff33ed5991201
+  ami           = "ami-010aff33ed5991201"
   instance_type = "t2.micro"
   count         = 2
 
