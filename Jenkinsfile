@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ("checkout from GIT") {
             steps {
-                git branch: 'main', credentialsId: '85266fc4-98d3-415b-8e1d-23a83d5e8951', url: 'https://github.com/send2durai/iac-demo.git'
+                git credentialsId: '85266fc4-98d3-415b-8e1d-23a83d5e8951', url: 'https://github.com/send2durai/iac-demo.git'
                 
             }
         }
@@ -36,7 +36,7 @@ pipeline {
                 sh 'terraform apply --auto-approve'
             }
         }
-	stage ("terraform destroy") {
+        stage ("terraform destroy") {
             steps {
                 sh 'terraform destroy --auto-approve'
             }
