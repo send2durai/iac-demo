@@ -53,7 +53,7 @@ resource "aws_s3_bucket" "b" {
 resource "aws_instance" "web" {
   ami           = "ami-010aff33ed5991201"
   instance_type = "t2.micro"
-  count         = 2
+  count         = 1
 
   tags = {
     Name = "Public-instance"
@@ -73,7 +73,3 @@ resource "aws_db_instance" "demo-mysqldb" {
   publicly_accessible  = true
   skip_final_snapshot  = true
 }
-
-
-
-
