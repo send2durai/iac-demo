@@ -8,9 +8,9 @@ Here are the steps, when do you wanted to setup as your own,
 2) Login to the box, install Git, Java, jenkins, Terraform package
 3) Get the instance Public IP address to access it over the browsers
    
-   # http://Public-IP:8080/ [ Jenkins default port number:8080 ]
+ # http://Public-IP:8080/ [ Jenkins default port number:8080 ]
    
-4) Setup some basic steps in Jenkins
+4) That's all
 
 5) Finish
 
