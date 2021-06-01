@@ -7,6 +7,9 @@ terraform {
     }
   }
 }
+provider "aws" {
+  region = "ap-south-1"
+}
 ## Creating VPC in AWS
 
 resource "aws_vpc" "dev" {
