@@ -15,6 +15,8 @@ Here are the steps, when do you wanted to setup as your own,
 5) Finish
 
 
- ######################## Setting up Freestyle / Pipeline Jobs in Jenkins using CI/CD method ####################
+ ### Setting up Freestyle / Pipeline Jobs in Jenkins using CI/CD method ###
+ 
+ Note: Nowadays, all companies moving towards to CI/CD methodology to setup anything on the cloud Infra.
 
 
