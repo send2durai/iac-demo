@@ -1,9 +1,12 @@
 ## Configure the AWS Provider
-provider "aws" {
-  version = "~> 3.0"
-  region  = "ap-south-1"
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+  }
 }
-
 ## Creating VPC in AWS
 
 resource "aws_vpc" "dev" {
