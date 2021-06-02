@@ -54,11 +54,11 @@ resource "aws_s3_bucket" "b" {
   }
 }
 
-### Creating an EC2 instance (t2.micro)
+### Creating an EC2 instance for Internet facing (t2.micro)
 
-resource "aws_instance" "web" {
-  ami           = "ami-010aff33ed5991201"
-  instance_type = "t2.micro"
+resource "aws_instance" "web-internet" {
+  ami           = "var.ami"
+  instance_type = "var.instance_type"
   count         = 1
 
   tags = {
@@ -66,6 +66,20 @@ resource "aws_instance" "web" {
     purpose = "Internet facing instance"
   }
 }
+
+### Creating an EC2 instance for Intranet facing (t2.micro)
+
+resource "aws_instance" "web-intranet" {
+  ami           = "var.ami"
+  instance_type = "var.instance_type"
+  count         = 1
+
+  tags = {
+    Name = "Private-instance"
+    purpose = "Intranet facing instance"
+  }
+}
+
 #### RDS instance creating
 resource "aws_db_instance" "demo-mysqldb" {
   allocated_storage    = 10
