@@ -57,7 +57,7 @@ resource "aws_s3_bucket" "b" {
 ### Creating an EC2 instance for Internet facing (t2.micro)
 
 resource "aws_instance" "web-internet" {
-  ami           = "ami-040589e8273e08d6e"
+  ami           = "ami-010aff33ed5991201"
   instance_type = "t2.micro"
   count         = 1
 
@@ -70,7 +70,7 @@ resource "aws_instance" "web-internet" {
 ### Creating an EC2 instance for Intranet facing (t2.micro)
 
 resource "aws_instance" "web-intranet" {
-  ami           = "ami-040589e8273e08d6e"
+  ami           = "ami-010aff33ed5991201"
   instance_type = "t2.micro"
   count         = 1
 
