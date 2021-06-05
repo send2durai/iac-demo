@@ -2,12 +2,12 @@ pipeline {
     agent any
     
     tools {
-        terraform 'terraform'
+        terraform 'Terraform'
     }
     stages {
         stage ("checkout from GIT") {
             steps {
-                git branch: 'main', credentialsId: '98ddb076-0e3a-4005-829a-3e8d08efbf5f', url: 'https://github.com/send2durai/iac-demo.git'
+                git branch: 'main', credentialsId: '313ea927-c52a-46bd-9bd2-c038ac77803c', url: 'https://github.com/send2durai/iac-demo.git'
                 
             }
         }
