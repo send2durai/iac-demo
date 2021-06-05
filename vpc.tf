@@ -57,8 +57,8 @@ resource "aws_s3_bucket" "b" {
 ### Creating an EC2 instance for Internet facing (t2.micro)
 
 resource "aws_instance" "web-internet" {
-  ami           = "var.ami"
-  instance_type = "var.instance_type"
+  ami           = "var.aws_ami"
+  instance_type = "var.aws_instance_type"
   count         = 1
 
   tags = {
@@ -70,8 +70,8 @@ resource "aws_instance" "web-internet" {
 ### Creating an EC2 instance for Intranet facing (t2.micro)
 
 resource "aws_instance" "web-intranet" {
-  ami           = "var.ami"
-  instance_type = "var.instance_type"
+  ami           = "var.aws_ami"
+  instance_type = "var.aws_instance_type"
   count         = 1
 
   tags = {
