@@ -13,41 +13,41 @@ pipeline {
         }
         stage ("terraform init") {
             steps {
-                sh 'Initialize a working directory containing Terraform configuration files'
+                sh 'echo "Initialize a working directory containing Terraform configuration files"'
                 sh 'terraform init'
             }
         }
         stage ("terraform fmt") {
             steps {
-                sh 'Is used to rewrite Terraform configuration files to a canonical format and style'
+                sh 'echo "Is used to rewrite Terraform configuration files to a canonical format and style"'
                 sh 'terraform fmt'
             }
         }
         stage ("terraform validate") {
             steps {
-                sh 'Is used to validate the syntax of the terraform files'
+                sh 'echo "Is used to validate the syntax of the terraform files"'
                 sh 'terraform validate'
             }
         }
         stage ("terrafrom plan") {
             steps {
-                sh 'Creates an execution plan, which lets you preview the changes that Terraform plans to make to your infrastructure'
+                sh 'echo "Creates an execution plan, which lets you preview the changes that Terraform plans to make to your infrastructure"'
                 sh 'terraform plan'
             }
         }
         stage ("terraform apply") {
             steps {
-                sh 'Command executes the actions proposed in a Terraform plan.'
+                sh 'echo "Command executes the actions proposed in a Terraform plan"'
                 sh 'terraform apply --auto-approve'
                 sh 'echo "taking a break for a while"'
                 sh 'sleep 5'
-                sh 'proceeding with resource deletion on next stage'
+                sh '"proceeding with resource deletion on next stage"'
             }
         }
         stage ("terrform destroy") {
             steps {
-                sh 'To delete all the resources, run terraform destroy'
-                sh 'AWS resources are deleting one after another'
+                sh 'echo "To delete all the resources, run terraform destroy"'
+                sh 'echo "AWS resources are deleting one after another"'
                 sh 'sleep 5'
                 sh 'terraform destroy --auto-approve'
             }
