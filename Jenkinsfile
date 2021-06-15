@@ -48,6 +48,7 @@ pipeline {
             steps {
                 sh 'To delete all the resources, run terraform destroy'
                 sh 'AWS resources are deleting one after another'
+                sh 'sleep 5'
                 sh 'terraform destroy --auto-approve'
             }
         }   
