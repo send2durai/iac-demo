@@ -41,7 +41,7 @@ pipeline {
                 sh 'terraform apply --auto-approve'
                 sh 'echo "taking a break for a while"'
                 sh 'sleep 5'
-                sh '"proceeding with resource deletion on next stage"'
+                sh 'echo "proceeding with resource deletion on next stage"'
             }
         }
         stage ("terrform destroy") {
