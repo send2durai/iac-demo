@@ -12,6 +12,12 @@ Here are the step that you need to perform, when you setup as fresh.
 
 Note: Nowadays the companies are moving towards to CI/CD methodology to produce softwares very quick manner to the customer. Why because "Time is Money". Thats where the Continuous Integration and Continuous Deployment/Delivery Model has born.
 
+     ____ ___ ____ ____  
+ / ___|_ _/ ___|  _ \ 
+| |    | | |   | | | |
+| |___ | | |___| |_| |
+ \____|___\____|____/ 
+
 
 
 
