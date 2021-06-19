@@ -10,6 +10,8 @@ Here are the step that you need to perform, when you setup as fresh.
 4) http://public-IP:8080/  (Jenkins default port number:8080)
 5) Finish
 
-## Note: Nowadays all the companies moving towards to CI/CD methodology to setup anything on the cloud Infrastructure.
+Note: Nowadays the companies are moving towards to CI/CD methodology to produce softwares very quick manner to the customer. Why because "Time is Money". Thats where the Continuous Integration and Continuous Deployment/Delivery Model has born.
+
+
 
 
