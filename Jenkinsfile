@@ -43,14 +43,6 @@ pipeline {
                 sh 'sleep 5'
                 sh 'echo "proceeding with resource deletion on next stage"'
             }
-        }
-        stage ("terrform destroy") {
-            steps {
-                sh 'echo "To delete all the resources, run terraform destroy"'
-                sh 'echo "AWS resources are deleting one after another"'
-                sh 'sleep 5'
-                sh 'terraform destroy --auto-approve'
-            }
-        }   
+        } 
     }
 }
