@@ -6,6 +6,7 @@ output "public-subnet" {
 }
 output "private-subnet" {
     value = "${aws_subnet.private-subnet.id}"
+}
 
 output "vpc_id" {
     value = "${aws_vpc.dev.id}"
