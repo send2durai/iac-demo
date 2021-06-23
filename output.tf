@@ -1,5 +1,5 @@
 output "VPC_ID" {
-    value = aws_vpc.main.id 
+    value = aws_vpc.dev.id 
 }
 
 output "DEF_VPC_ID" {
@@ -14,10 +14,10 @@ output "DEFAULT_VPC_CIDR" {
     value = data.aws_vpc.default.cidr_block
 }
 
-output "PRIVATE_SUBNETS" {
+output "PRIVATE-SUBNET" {
     value = aws_subnet.private.*.id 
 }
 
-output "PUBLIC_SUBNETS" {
+output "PUBLIC-SUBNET" {
     value = aws_subnet.public.*.id 
 }
