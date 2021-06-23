@@ -1,10 +1,6 @@
 output "web-internet" {
     value = "${aws_instance.web-internet.id}"
 }
-output "web-intranet" {
-    value = "${aws_instance.web-intranet.id}"
-}
-
 output "demo-mysqldb" {
     value  = "${aws_db_instance.demo-mysqldb.id}"
 }
