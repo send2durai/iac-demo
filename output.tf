@@ -1,7 +1,7 @@
 output "web-internet" {
     value = "${aws_instance.web-internet.public_ip}"
 }
-output "public_ip" {
+output "web-intranet" {
     value = "${aws_instance.web-intranet.public_ip}"
 }
 
@@ -11,10 +11,10 @@ output "demo-mysqldb" {
 output "b" {
     value = "${aws_s3_bucket.my-tf-demo-bucket}"
 }
-output "subnet" {
+output "private-subnet" {
     value = "${aws_subnet.private-id}"
 }
-output "subnet" {
+output "public-subnet" {
     value = "${aws_subnet.public-id}"
 }
 output "vpc_id" {
