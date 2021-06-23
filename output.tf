@@ -11,9 +11,3 @@ output "private-subnet" {
 output "vpc_id" {
     value = "${aws_vpc.dev.id}"
 }
-output "web-internet" {
-    value = "${aws_instance.web-internet.id}"
-}
-output "web-intranet" {
-    value = "${aws_instance.web-intranet.id}"
-}
