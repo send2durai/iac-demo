@@ -12,8 +12,8 @@ output "vpc_id" {
     value = "${aws_vpc.dev.id}"
 }
 output "web-internet" {
-    value = "${aws_instance.web-internet[count.index[0]}"
+    value = "${aws_instance.web-internet([count.index[0])}"
 }
 output "web-intranet" {
-    value = "${aws_instance.web-intranet[count.index[0]}"
+    value = "${aws_instance.web-intranet([count.index[0])}"
 }
