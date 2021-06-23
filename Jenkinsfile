@@ -1,5 +1,4 @@
-
-peline {
+pipeline {
     agent any
     
     tools {
@@ -54,5 +53,4 @@ peline {
             }
         }   
     }
-}
 }
