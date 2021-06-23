@@ -1,13 +1,23 @@
-output "demo-mysqldb" {
-    value  = "${aws_db_instance.demo-mysqldb.id}"
-}
-output "public-subnet" {
-    value = "${aws_subnet.public-subnet.id}"
-}
-output "private-subnet" {
-    value = "${aws_subnet.private-subnet.id}"
+output "VPC_ID" {
+    value = aws_vpc.main.id 
 }
 
-output "vpc_id" {
-    value = "${aws_vpc.dev.id}"
+output "DEF_VPC_ID" {
+    value = var.DEF_VPC_ID
+}
+
+output "VPC_CIDR" {
+    value = var.VPC_CIDR 
+}
+
+output "DEFAULT_VPC_CIDR" {
+    value = data.aws_vpc.default.cidr_block
+}
+
+output "PRIVATE_SUBNETS" {
+    value = aws_subnet.private.*.id 
+}
+
+output "PUBLIC_SUBNETS" {
+    value = aws_subnet.public.*.id 
 }
