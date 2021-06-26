@@ -1,4 +1,4 @@
-## Configure the AWS Provider
+## Configure the AWS provider block
 terraform {
   required_providers {
     aws = {
@@ -10,7 +10,7 @@ terraform {
 provider "aws" {
   region = "ap-south-1"
 }
-## Creating VPC in AWS
+## Creating resource block
 
 resource "aws_vpc" "dev" {
   cidr_block       = "192.168.0.0/16"
