@@ -1,5 +1,5 @@
-aws_access_key = "ALNAUDR7LWQZZBT65HYO"
-aws_secret_key = "jGwi0efFKwK7YUG9A2F5pZyLKjqG2zRiNaT52A79"
+aws_access_key = "XYZYASTYCUVYASJKLM"
+aws_secret_key = "ghfv789023456uijhgoplmhgb"
 
 # Environments like Dev, Cert and Prod
 aws_resource_env = ["Dev","Cert","Prod"]
