@@ -3,8 +3,8 @@ variable "aws_region" {
   type   = string
 }
 ## Declaring aws keys in a block
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
+## variable "aws_access_key" {}
+## variable "aws_secret_key" {}
 
 # Declaring the environmetnal variables
 variable "aws_resource_env" {}
