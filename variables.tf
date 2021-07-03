@@ -38,12 +38,12 @@ variable "aws_tag_purpose" {}
 ######################################################################## CLB ###################################################################
 
 ## Declaring variables in this block
-variable "aws_region" {
-  type   = string
-}
+#variable "aws_region" {
+  #type   = string
+#}
 ## Declaring aws keys in a block
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
+#variable "aws_access_key" {}
+#variable "aws_secret_key" {}
 
 # Declaring the resource name in the resource block
 variable "clb_name" {
