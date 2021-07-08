@@ -35,9 +35,10 @@ pipeline {
         stage ("Happy Learning") {
            steps {
                echo "This is the basic tutorial for setting up IAC"
+               echo "IAC using Jenkins parameterized build"
            }
         }
-    }
-  }
- }
+      }
+     }
+   }
 }
