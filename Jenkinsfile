@@ -4,22 +4,28 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-            checkout([$class: 'GitSCM', branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/send2durai/iac-demo.git']]])            
+            checkout([$class: 'GitSCM', branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/send2durai/iac-demo.git']]])
 
           }
         }
-        
+
         stage ("terraform init") {
             steps {
-                sh ('terraform init') 
+                sh ('terraform init')
             }
         }
-        
+
         stage ("terraform Action") {
             steps {
                 echo "Terraform action is --> ${action}"
-                sh ('terraform ${action} --auto-approve') 
+                sh ('terraform ${action} --auto-approve')
            }
-        }  
+        }
+
+        stage ("Happy Learning") {
+           steps {
+               echo "This is the basic tutorial for setting up IAC"
+           }
+        }
     }
 }
