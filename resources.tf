@@ -50,7 +50,7 @@ resource "aws_db_instance" "mysqldb" {
   username                  = var.rds_username
   password                  = var.rds_password
   parameter_group_name      = "default.mysql5.7"
-  skip_final_snapshot       = false
+  skip_final_snapshot       = true
   tags                      = {
     Name                    = var.aws_tag_name[0]
     Purpose                 = var.aws_tag_purpose[1]
