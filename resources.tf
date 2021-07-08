@@ -38,17 +38,3 @@ resource "aws_instance" "web-server-2" {
     Env                     = var.aws_tag_env[2]
   }
 }
-
-# Declaring RDS DB creation..
-
-resource "aws_db_instance" "mysqldb" {
-  allocated_storage         = 10
-  engine                    = "mysql"
-  engine_version            = "5.7"
-  instance_class            = "db.t2.micro"
-  name                      = "mys-db"
-  username                  = "admin"
-  password                  = "login1-2"
-  parameter_group_name      = "default.mysql5.7"
-  skip_final_snapshot       = false
-}
