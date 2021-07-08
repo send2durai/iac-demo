@@ -24,14 +24,5 @@ pipeline {
                 sh 'terraform apply --auto-approve'
            }
         }
-
-        stage ("terraform Destroy") {
-            steps {
-                echo "This where the Jenkins admins need to select, whether he/she wants to destroy resources in AWS"
-                echo "Going to execute the terraform destroy command"
-                sh 'sleep 3'
-                sh 'terraform destroy --auto-approve'
-           }
-        }
      }
 }
