@@ -1,56 +1,36 @@
 pipeline {
     agent any
-    
-    tools {
-        terraform 'Terraform'
-    }
+
     stages {
-        stage ("checkout from GIT") {
+        stage('Git Checkout') {
             steps {
-                git branch: 'main', credentialsId: '8e5538c9-18f5-406f-9c48-c388b15b44a9', url: 'https://github.com/send2durai/iac-demo.git'
-                
+                echo 'This is the Parameterized Job to perform Services Spinup in AWS'
             }
         }
-        stage ("terraform init") {
+        stage('terraform init') {
             steps {
-                sh 'echo "Initialize a working directory containing Terraform configuration files"'
                 sh 'terraform init'
             }
         }
-        stage ("terraform fmt") {
+        
+        stage('terraform action') {
             steps {
-                sh 'echo "Is used to rewrite Terraform configuration files to a canonical format and style"'
-                sh 'terraform fmt'
+                echo 'terraform action from the parameter is --->${action}'
+                sh 'terraform ${action} --auto-approve'
             }
         }
-        stage ("terraform validate") {
+        
+        stage('terraform action') {
             steps {
-                sh 'echo "Is used to validate the syntax of the terraform files"'
-                sh 'terraform validate'
+                echo 'terraform action from the parameter is --->${action}'
+                sh 'terraform ${action} --auto-approve'
             }
         }
-        stage ("terrafrom plan") {
+        
+        stage('Happy Learning') {
             steps {
-                sh 'echo "Creates an execution plan, which lets you preview the changes that Terraform plans to make to your infrastructure"'
-                sh 'terraform plan'
+                echo 'Happy Learning ! Spread the positivity to the world'
             }
         }
-        stage ("terraform apply") {
-            steps {
-                sh 'echo "Command executes the actions proposed in a Terraform plan"'
-                sh 'terraform apply --auto-approve'
-                sh 'echo "taking a break for a while"'
-                sh 'sleep 5'
-                sh 'echo "proceeding with resource deletion on next stage"'
-            }
-        }
-        stage ("terrform destroy") {
-            steps {
-                sh 'echo "To delete all the resources, run terraform destroy"'
-                sh 'echo "AWS resources are deleting one after another"'
-                sh 'sleep 5'
-                sh 'terraform destroy --auto-approve'
-            }
-        }   
     }
 }
