@@ -42,24 +42,3 @@ resource "aws_instance" "web-server-2" {
     Tower                   = var.aws_tag_tower
   }
 }
-
-# Declaring RDS DB creation..
-
-resource "aws_db_instance" "mysqldb" {
-  allocated_storage         = var.rds_allocated_storage
-  engine                    = "mysql"
-  engine_version            = "5.7"
-  instance_class            = "db.t2.micro"
-  name                      = var.rds_name
-  username                  = var.rds_username
-  password                  = var.rds_password
-  parameter_group_name      = "default.mysql5.7"
-  skip_final_snapshot       = true
-  tags                      = {
-    Name                    = var.aws_tag_name[0]
-    Purpose                 = var.aws_tag_purpose[1]
-    Env                     = var.aws_tag_env[0]
-    Owner                   = var.aws_tag_owner
-    Tower                   = var.aws_tag_tower
-  }
-}
