@@ -46,3 +46,28 @@ variable "aws_tag_purpose" {
 variable "aws_tag_env" {
   type  = list
 }
+
+# Declaring RDS creation variable
+variable "aws_db_instance" {
+  type    = string
+}
+
+# Declaring the RDS username and password
+variable "rds_username" {
+  type  = string
+}
+
+# Declaring the RDS username and password
+variable "rds_password" {
+  type  = string
+}
+
+# Declaring the RDS name
+variable "rds_name" {
+  type  = string
+}
+
+# Declaring the RDS allocated storage
+variable "rds_allocated_storage" {
+  type  = number
+}
