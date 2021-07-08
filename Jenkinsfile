@@ -17,6 +17,7 @@ pipeline {
 
         stage ("terraform Action") {
             steps {
+                echo "This where the Jenkins admins need to select, whether he/she wants to deploy or destroy resources in AWS"
                 echo "Terraform action is --> ${action}"
                 sh ('terraform ${action} --auto-approve')
            }
