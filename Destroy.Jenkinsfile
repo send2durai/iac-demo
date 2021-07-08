@@ -8,9 +8,9 @@ pipeline {
             }
         }
     }
-    
-    stage('Terraform destroy') {
-        steps {
+
+        stage('Terraform destroy') {
+            steps {
             echo "This where the Jenkins admins need to select, whether he/she wants to destroy resources in AWS"
             echo "Going to execute the terraform destroy command"
             sh 'sleep 3'
