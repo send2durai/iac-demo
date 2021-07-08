@@ -29,4 +29,19 @@ aws_tag_name      = ["dev_appserver1","prod_appserver2"]
 aws_tag_env      = ["dev","cert","prod"]
 
 # Declaring the tag_purpose
-aws_tag_purpose  = ["dev webapp","cert webapp"]
+aws_tag_purpose  = ["dev webapp","dev_backend_mysqldb"]
+
+# Declaring the RDS instance variables values
+aws_db_instance  = "mysqldb"
+
+# Declaring the RDS user name variables values
+rds_username  = "admin"
+
+# Declaring the RDS user name variables values
+rds_password  = "login1-2"
+
+# Declaring the RDS name
+rds_name     = "my_mysqldb"
+
+# Declaring the RDS allocated storage
+rds_allocated_storage = 10
