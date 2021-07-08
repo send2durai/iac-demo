@@ -31,14 +31,7 @@ pipeline {
                 echo "Going to execute the terraform destroy"
                 sh 'sleep 3'
                 sh ('terraform destroy --auto-approve')
-
-        stage ("Happy Learning") {
-           steps {
-               echo "This is the basic tutorial for setting up IAC"
-               echo "IAC using Jenkins parameterized build"
            }
         }
-      }
      }
-   }
 }
