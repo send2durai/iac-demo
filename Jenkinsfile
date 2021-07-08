@@ -2,35 +2,24 @@ pipeline {
     agent any
 
     stages {
-        stage('Git Checkout') {
+        stage('Checkout') {
             steps {
-                echo 'This is the Parameterized Job to perform Services Spinup in AWS'
-            }
+            checkout([$class: 'GitSCM', branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/send2durai/iac-demo.git']]])            
+
+          }
         }
-        stage('terraform init') {
+        
+        stage ("terraform init") {
             steps {
-                sh 'terraform init'
+                sh ('terraform init') 
             }
         }
         
-        stage('terraform action') {
+        stage ("terraform Action") {
             steps {
-                echo 'terraform action from the parameter is --->${action}'
-                sh 'terraform ${action} --auto-approve'
-            }
+                echo "Terraform action is --> ${action}"
+                sh ('terraform ${action} --auto-approve') 
+           }
         }
         
-        stage('terraform action') {
-            steps {
-                echo 'terraform action from the parameter is --->${action}'
-                sh 'terraform ${action} --auto-approve'
-            }
-        }
-        
-        stage('Happy Learning') {
-            steps {
-                echo 'Happy Learning ! Spread the positivity to the world'
-            }
-        }
     }
-}
