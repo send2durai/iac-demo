@@ -11,7 +11,7 @@ pipeline {
 
         stage ("terraform init") {
             steps {
-                sh 'Going to initialise the terraform module and download the plugin'
+                echo "Going to initialise the terraform module and download the plugin"
                 sh 'terraform init'
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         stage ("terraform Apply") {
             steps {
                 echo "This where the Jenkins admins need to select, whether he/she wants to deploy resources in AWS"
-                echo "Going to execute the terraform apply"
+                echo "Going to execute the terraform apply command"
                 sh 'sleep 3'
                 sh 'terraform apply --auto-approve'
            }
@@ -28,7 +28,7 @@ pipeline {
         stage ("terraform Destroy") {
             steps {
                 echo "This where the Jenkins admins need to select, whether he/she wants to destroy resources in AWS"
-                echo "Going to execute the terraform destroy"
+                echo "Going to execute the terraform destroy command"
                 sh 'sleep 3'
                 sh 'terraform destroy --auto-approve'
            }
