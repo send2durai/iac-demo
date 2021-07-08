@@ -47,6 +47,15 @@ variable "aws_tag_env" {
   type  = list
 }
 
+# Declaring the tag owner and tower variable
+variable "aws_tag_owner" {
+  type = string
+}
+
+variable "aws_tag_tower" {
+  type = string
+}
+
 # Declaring RDS creation variable
 variable "aws_db_instance" {
   type    = string
