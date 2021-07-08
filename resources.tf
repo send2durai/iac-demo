@@ -22,6 +22,8 @@ resource "aws_instance" "web-server-1" {
     Name                    = var.aws_tag_name[0]
     Purpose                 = var.aws_tag_purpose[0]
     Env                     = var.aws_tag_env[0]
+    Owner                   = var.aws_tag_owner
+    Tower                   = var.aws_tag_tower
   }
 }
 ## configure the resoruce block with another instance_type
@@ -36,6 +38,8 @@ resource "aws_instance" "web-server-2" {
     Name                    = var.aws_tag_name[1]
     Purpose                 = var.aws_tag_purpose[1]
     Env                     = var.aws_tag_env[2]
+    Owner                   = var.aws_tag_owner
+    Tower                   = var.aws_tag_tower
   }
 }
 
@@ -55,5 +59,7 @@ resource "aws_db_instance" "mysqldb" {
     Name                    = var.aws_tag_name[0]
     Purpose                 = var.aws_tag_purpose[1]
     Env                     = var.aws_tag_env[0]
+    Owner                   = var.aws_tag_owner
+    Tower                   = var.aws_tag_tower
   }
 }
