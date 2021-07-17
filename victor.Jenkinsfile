@@ -23,7 +23,7 @@
 		   yum remove -y bind-utils
 		   sleep 2
 		   yum update -y
-		   update
+		   updatedb
 		   yum install -y bind-utils
 		   yum list installed | grep 'bind-utils'
 		   sleep 2
