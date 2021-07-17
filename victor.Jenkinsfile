@@ -9,31 +9,31 @@
           }
         }
 
-        stage ("terraform init") {
+        stage ("list of blocks find out") {
             steps {
-                echo "Going to initialise the terraform module and download the plugin"
-                sh 'terraform init'
+                echo "This is my first stage"
+                sh 'lsblk'
             }
         }
 		
-		stage ("terraform format") {
+		stage ("disk free") {
             steps {
-                echo "Going to initialise the terraform module and download the plugin"
-                sh 'terraform fmt'
+                echo "this is my second stage"
+                sh 'df'
             }
         }
 		
-		stage ("Victor Demo") {
+		stage ("ip finding") {
             steps {
-                echo "Just Name shake, am keeping this stage"
+                echo "this is my third stage"
                 sh 'sleep 3'
-		echo "Demo stage"
+		sh 'ifconfig'
             }
         }
 		
-		stage ("Job completed") {
+		stage ("OS version finding") {
             steps {
-               echo "Just Name shake, am keeping this stage"
+               echo "This is to find out Jenkins base OS version"
                sh 'sleep 3'
 	       echo "Job completed"
             }
