@@ -35,6 +35,7 @@
             steps {
                echo "This is to find out Jenkins base OS version"
                sh 'sleep 3'
+	       sh 'cat /etc/os-release'
 	       echo "Job completed"
             }
         }
