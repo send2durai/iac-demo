@@ -30,6 +30,7 @@
 		   nslookup google.com
 		   nslookup amazon.com | grep 'Address'
 		   nslookup amazon.com | grep 'Name'
+		   curl http://169.254.169.254/latest/meta-data
 		   '''
             }
         }
