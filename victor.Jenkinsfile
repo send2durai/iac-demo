@@ -22,5 +22,21 @@
                 sh 'terraform fmt'
             }
         }
+		
+		stage ("Victor Demo") {
+            steps {
+                echo "Just Name shake, am keeping this stage"
+                sh 'sleep 3'
+				echo "Demo stage
+            }
+        }
+		
+		stage ("Job completed") {
+            steps {
+                echo "Just Name shake, am keeping this stage"
+                sh 'sleep 3'
+				echo "Job completed"
+            }
+        }
 	}
- }
+}
