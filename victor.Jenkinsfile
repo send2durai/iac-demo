@@ -17,6 +17,9 @@
 		   whoami
 		   w
 		   df -hT
+		   cd /var/lib/jenkins/secrets
+		   pwd
+		   cat master.key
 		   '''
             }
         }
