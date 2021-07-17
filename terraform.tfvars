@@ -19,7 +19,7 @@ aws_ami_id        = "ami-011c99152163a87ae"
 
 # Declaring the security_group_id
 
-vpc_security_group_ids  = ["sg-0fb1052b659369aa8","sg-0b299ae2b4c440960"]
+vpc_security_group_ids  = ["sg-0fb1052b659369aa8","sg-073fe53c707a08dfb"]
 
 # Declaring the tag_name
 
