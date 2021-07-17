@@ -12,11 +12,11 @@ terraform {
 }
 ## Configure the resource block
 resource "aws_instance" "web-server-1" {
-  ami                       = var.aws_ami_id
-  instance_type             = var.aws_instance_type[0]
-  subnet_id                 = var.aws_subnet_id[0]
-  vpc_security_group_ids    = [var.vpc_security_group_ids[0]]
-  key_name                  = var.aws_key_name
+  ami                          = var.aws_ami_id
+  instance_type               = var.aws_instance_type[0]
+  subnet_id                  = var.aws_subnet_id[0]
+  vpc_security_group_ids   = [var.vpc_security_group_ids[0]]
+  key_name             = var.aws_key_name
 
   tags                      = {
     Name                    = var.aws_tag_name[0]
