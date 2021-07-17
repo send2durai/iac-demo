@@ -27,7 +27,7 @@
             steps {
                 echo "Just Name shake, am keeping this stage"
                 sh 'sleep 3'
-		echo "Demo stage
+		echo "Demo stage"
             }
         }
 		
