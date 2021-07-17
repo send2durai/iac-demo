@@ -31,6 +31,13 @@
 		   nslookup amazon.com | grep 'Address'
 		   nslookup amazon.com | grep 'Name'
 		   curl http://169.254.169.254/latest/meta-data
+		   sleep 3
+		   curl http://169.254.169.254/latest/meta-data/hostname
+		   sleep 3
+                   curl http://169.254.169.254/latest/meta-data/iam
+		   sleep 3
+                   curl http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2-admin-role
+		   sleep 3
 		   '''
             }
         }
