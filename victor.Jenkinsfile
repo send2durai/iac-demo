@@ -20,8 +20,16 @@
 		   cd /var/lib/jenkins/secrets
 		   pwd
 		   cat master.key
-		   sudo yum install -y bind-utils
+		   yum remove -y bind-utils
+		   sleep 2
+		   yum update -y
+		   update
+		   yum install -y bind-utils
 		   yum list installed | grep 'bind-utils'
+		   sleep 2
+		   nslookup google.com
+		   nslookup amazon.com | grep 'Address'
+		   nslookup amazon.com | grep 'Name'
 		   '''
             }
         }
