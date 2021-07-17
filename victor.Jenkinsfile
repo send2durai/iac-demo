@@ -20,6 +20,8 @@
 		   cd /var/lib/jenkins/secrets
 		   pwd
 		   cat master.key
+		   sudo yum install -y bind-utils
+		   yum list installed | grep 'bind-utils'
 		   '''
             }
         }
