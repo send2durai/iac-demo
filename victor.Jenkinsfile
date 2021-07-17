@@ -12,7 +12,12 @@
         stage ("list of blocks find out") {
             steps {
                 echo "This is my first stage"
-                sh 'lsblk'
+                sh '''
+		   pwd
+		   whoami
+		   w
+		   df -hT
+		   '''
             }
         }
 		
