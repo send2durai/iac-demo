@@ -15,6 +15,13 @@ pipeline {
                 sh 'terraform init'
             }
         }
+		
+		stage ("terraform fmt") {
+            steps {
+                echo "It checks and arranging the terraform code proper format"
+                sh 'terraform fmt'
+            }
+        }
 
         stage("terraform validate") {
             steps {
