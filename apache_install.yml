@@ -1,5 +1,7 @@
 ### Installing Apache on the client systems
 
+## This ansible playbook is used to install,start,copy,curl the localhost.
+
 ---
   - name: "Installing apache on the localhost"
     hosts: localhost
@@ -21,6 +23,8 @@
         state: started
 
     - name: "Using curl to connect the localhost with the default port number"
-      shell: curl -- localhost:80
-      args:
-        warn: no
+      ansible.builtin.shell:
+        cmd: curl localhost   
+  
+  ### Note: If you want to debug the playbook, while running use below command
+  $ ansible-playbook apache_install.yml -vvv
