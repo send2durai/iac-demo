@@ -1,0 +1,26 @@
+### Installing Apache on the client systems
+
+---
+  - name: "Installing apache on the localhost"
+    hosts: localhost
+    become: yes
+    become_user: root
+    tasks:
+    - name: "Installing apache package to the system"
+      yum:
+        name: httpd
+        state: present
+    - name: "Copying static content to /var/www/html directory"
+      ansible.builtin.copy:
+        src: /home/centos/my_scriptss/index.html
+        dest: /var/www/html/index.html
+
+    - name: "Ensure httpd is running"
+      service:
+        name: httpd
+        state: started
+
+    - name: "Using curl to connect the localhost with the default port number"
+      shell: curl -- localhost:80
+      args:
+        warn: no
