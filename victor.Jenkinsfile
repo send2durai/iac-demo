@@ -26,7 +26,6 @@ pipeline {
                updatedb
                yum install -y bind-utils
                yum list installed | grep 'bind-utils'
-               yum installed list > /home/centos/yum-packages.txt
                sleep 2
                nslookup google.com
                nslookup amazon.com | grep 'Address'
