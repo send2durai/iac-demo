@@ -17,7 +17,7 @@ During Jenkins setting up in EC2-Instance, we need to keep few things in mind,
 2) Terraform installation also mandatory
 3) Go to manage plugins, where you search for a plugin name called "Terraform plugin" which has to be integrated with Jenkins
 
-Note: Nowadays the companies are moving towards to CI/CD methodology to produce softwares very quick manner to the customer. The reason behind is "Time is Money" and "Time to Market" our products. Thats where the Continuous Integration and Continuous Deployment/Delivery Modelhas born.
+Note: Nowadays the companies are moving towards to CI/CD methodology to produce softwares very quick manner to the customer. The reason behind is "Time is Money" and "Time to Market" our products. Thats where the Continuous Integration and Continuous Deployment/Delivery Model has born.
 
 
 
