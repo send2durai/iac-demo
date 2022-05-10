@@ -1,0 +1,73 @@
+
+
+file
+length
+toset --convert list into set
+##########################################
+
+Builtin fucntions:
+
+Numeric functions  --> Is used to transform and manipulate numbres
+Strinf functions   --> Is used to transform and manipulat string data
+Collection functions
+Type Conversion functions
+
+==========================================
+Lifecycle Rules in TF:
+=====================
+create_before_destroy:-
+
+lifecycle {
+  create_before_destroy = true
+}
+
+prevent_destroy:-
+
+lifecycle {
+  prevent_destroy = true
+}
+
+
+ignore_changes:-
+
+lifecycle {
+  ignore_changes = [
+    tags
+ ]
+}
+     (OR)
+lifecycle {
+  ignore_changes = all
+}
+
+====================
+
+terraform taint aws_instance.webserver.id
+terraform untaint aws_instance.webserver.id
+
+# Note: when you perform terraform taint, what will happen is that the specified instance would be marking as tainted. The next terraform apply time, it will be getting executed
+and destroyed and provisioned a new instance. Most suitable situation is "provisioner time, if we put wrong command on inline section or script, where taint comes in picture".
+
+########################################################
+
+Debugging/Logging:
+-----------------
+$ export TF_LOG=TRACE
+
+when you execute 'terraform plan' where you can notice INFO<WARNING<ERROR<DEBUG<TRACE 
+
+Log levels:
+----------
+INFO
+WARNING
+ERROR
+DEBUG
+TRACE
+=====================
+$ export TF_LOG_PATH=/tmp/terraform.log
+
+It gathers all the logs in a specific directory with file that we specified.
+
+If you don't wish to have TF_LOG_PATH, execute command below,
+
+$ unset TF_LOG_PATH
