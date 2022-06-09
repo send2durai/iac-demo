@@ -29,5 +29,11 @@ pipeline {
                 sh 'terraform destroy --auto-approve'
            }
         }
-     }
+        stage ('slack it'){
+            steps {
+              slackSend channel: '#demo_jenkins_slack',
+                        message: "AWS resources have been deleted successfully"
+      }
+    }
+    }
 }
