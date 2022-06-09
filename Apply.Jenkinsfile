@@ -45,5 +45,12 @@ pipeline {
                 sh 'terraform apply --auto-approve'
            }
         }
-     }
+        stage ('slack it'){
+            steps {
+              slackSend channel: '#demo_jenkins_slack',
+                        message: "Job has successfull"
+      }
+    }
+    
+    }
 }
