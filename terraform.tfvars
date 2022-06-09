@@ -5,14 +5,14 @@ aws_region  = "ap-south-1"
 aws_resource_env = ["Dev","Cert","Prod"]
 
 # Declaring key_name
-aws_key_name   = "ondot"
+aws_key_name   = "admin"
 
 # Declaring the instance_type
 
 aws_instance_type = ["t2.micro","t3.nano","t2.large"]
 
 # Declaring the subnet id
-aws_subnet_id     = ["subnet-e9190a81","subnet-d866eda3"]
+aws_subnet_id     = ["subnet-03e0a14f","subnet-d866eda3"]
 
 # Declaring the ami_id
 aws_ami_id        = "ami-011c99152163a87ae"
