@@ -29,10 +29,20 @@ pipeline {
                 sh 'terraform destroy --auto-approve'
            }
         }
+        stage("Create a file"){
+            steps{
+                sh 'echo Hello Terraform AWS! > AWS_resources.txt'
+            }
+        }
+        stage("Upload File"){
+            steps{
+                slackUploadFile filePath: 'AWS_resources.txt', initialComment: 'here is your file'
+            }
+        }
         stage ('slack it'){
             steps {
               slackSend channel: '#demo_jenkins_slack',
-                        message: "AWS resources have been deleted successfully"
+                        message: "Job has successfull"
       }
     }
     }
