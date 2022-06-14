@@ -47,7 +47,7 @@ rds_name     = "my_mysqldb"
 rds_allocated_storage = 10
 
 # Declaring the Owner and Tower variable values
-aws_tag_owner = "thangadurai.murugan@dell.com"
+aws_tag_owner = "thangadurai.murugan@example.com
 
 ## Declaring the Tower variable values
 aws_tag_tower = "CloudOps"
